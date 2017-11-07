@@ -1,0 +1,53 @@
+<ol class="breadcrumb">
+  <li>
+    <a [routerLink]="['/contact']">Login Information</a>
+  </li>
+  <li>
+    <a [routerLink]="['/subscription']">Subscription</a>
+  </li>
+  <li>Review</li>
+</ol>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-offset-3 col-sm-6">
+      Review your choices:
+    </div>
+  </div>
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label for="name" class="col-sm-offset-3 col-sm-2 control-label">Name:</label>
+      <div class="col-sm-4 form-control-static">
+        {{(subscription | async)?.name}}
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="name" class="col-sm-offset-3 col-sm-2 control-label">Email Address:</label>
+      <div class="col-sm-4 form-control-static">
+        {{(subscription | async)?.email}}
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="name" class="col-sm-offset-3 col-sm-2 control-label">Password:</label>
+      <div class="col-sm-4 form-control-static">
+        **********
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="name" class="col-sm-offset-3 col-sm-2 control-label">Subscription Level:</label>
+      <div class="col-sm-4 form-control-static">
+        {{(subscription | async)?.subscription}}
+      </div>
+    </div>
+  </form>
+  <div class="row">
+    <div class="col-sm-offset-3 col-sm-6">
+      <button (click)="prev($event)" class="btn btn-default pull-left">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i> Prev
+      </button>
+      <button (click)="next($event)" class="btn btn-primary pull-right">
+        <i class="fa fa-floppy-o" aria-hidden="true"></i> Submit
+      </button>
+    </div>
+  </div>
+
+</div>
