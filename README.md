@@ -8,6 +8,7 @@
 This is a standard CLI project so...
 
 `npm install`
+
 `npm start`
 
 And then point the browser to http://localhost:4200
