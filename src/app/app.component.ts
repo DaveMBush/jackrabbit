@@ -14,7 +14,7 @@ export class AppComponent {
   errors: Observable<ReadonlyArray<string>>;
 
   constructor(store: Store<AppState>) {
-    this.wait = store.select((x: AppState) => /* istanbul ignore next */ x.shared.wait);
-    this.errors = store.select((x: AppState) => /* istanbul ignore next */ x.shared.errors);
+    this.wait = store.select(/* istanbul ignore next */(x: AppState) => x.shared.wait);
+    this.errors = store.select(/* istanbul ignore next */(x: AppState) => x.shared.errors);
   }
 }
