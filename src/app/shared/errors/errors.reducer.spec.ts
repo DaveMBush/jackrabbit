@@ -1,8 +1,7 @@
 import { errorsReducer } from './errors.reducer';
 import { SharedModule } from '../shared.module';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, TestBed } from '@angular/core/testing';
 
-import { ErrorsComponent } from './errors.component';
 import { StoreModule } from '@ngrx/store';
 import * as Errors from './errors.actions';
 
