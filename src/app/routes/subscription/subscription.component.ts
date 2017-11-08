@@ -2,7 +2,7 @@ import { Subscription } from '../../shared/subscription/subscription';
 import { AppState } from '../../app-state';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Subscription as RxJsSubscription } from 'rxjs/Rx';
 import * as SubscriptionActions from '../../shared/subscription/subscription.actions';
@@ -10,7 +10,8 @@ import * as SubscriptionActions from '../../shared/subscription/subscription.act
 @Component({
   selector: 'app-subscription',
   templateUrl: './subscription.component.html',
-  styleUrls: ['./subscription.component.css']
+  styleUrls: ['./subscription.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SubscriptionComponent implements OnInit, OnDestroy {
   form: FormGroup;

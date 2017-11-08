@@ -2,7 +2,7 @@ import { Subscription } from '../../shared/subscription/subscription';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AppState } from '../../app-state';
 import { Router } from '@angular/router';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Subscription as RxJsSubscription } from 'rxjs/Rx';
 import * as SubscriptionActions from '../../shared/subscription/subscription.actions';
@@ -11,7 +11,8 @@ import * as SubscriptionActions from '../../shared/subscription/subscription.act
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+  styleUrls: ['./contact.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ContactComponent implements OnInit, OnDestroy {
   form: FormGroup;
