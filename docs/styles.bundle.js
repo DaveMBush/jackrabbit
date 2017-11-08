@@ -124,7 +124,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".disabled {\n    color: lightgray;\n}\n", ""]);
+exports.push([module.i, ".disabled {\n    color: lightgray;\n}\n\n.error {\n    color: red;\n    margin-top: -10px;\n    margin-bottom: 10px;\n    padding-left: 15px;\n}\n", ""]);
 
 // exports
 
