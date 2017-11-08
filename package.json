@@ -16,7 +16,9 @@
   },
   "pre-commit": [
     "csslint",
-    "lint"
+    "lint",
+    "test",
+    "build"
   ],
   "private": true,
   "dependencies": {

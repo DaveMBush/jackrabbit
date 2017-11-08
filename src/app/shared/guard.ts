@@ -1,8 +1,11 @@
+import { Injectable } from '@angular/core';
 import { Subscription } from './subscription/subscription';
 import { AppState } from '../app-state';
 import { Observable } from 'rxjs/Rx';
 import { CanLoad, Route, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
+
+@Injectable() // need injectable to make the tests work
 export class Guard implements CanLoad {
 
     constructor(private store: Store<AppState>, private router: Router) {

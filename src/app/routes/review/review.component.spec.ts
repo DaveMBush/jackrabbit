@@ -1,3 +1,10 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { SharedModule } from '../../shared/shared.module';
+import { RouterModule } from '@angular/router';
+import { CommonModule, APP_BASE_HREF } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreModule } from '@ngrx/store';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ReviewComponent } from './review.component';
@@ -8,9 +15,27 @@ describe('ReviewComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ReviewComponent ]
+      providers: [
+        {
+          provide: APP_BASE_HREF,
+          useValue: '/'
+        }
+      ],
+      imports: [
+        StoreModule.forRoot({}),
+        EffectsModule.forRoot([]),
+        BrowserModule,
+        CommonModule,
+        RouterModule.forRoot([{
+          path: '',
+          pathMatch: 'full',
+          component: ReviewComponent
+        }]),
+        SharedModule
+      ],
+      declarations: [ReviewComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
