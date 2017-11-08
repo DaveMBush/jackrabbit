@@ -18,9 +18,10 @@ export class ErrorsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /* istanbul ignore next - trivial */
   clear(): void {
     this.store.dispatch(
-        new Errors.Clear()
+      new Errors.Clear()
     );
   }
 }

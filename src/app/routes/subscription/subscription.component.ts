@@ -31,6 +31,7 @@ export class SubscriptionComponent implements OnInit, OnDestroy {
       (x: AppState) => x.shared.subscription);
   }
 
+  /* istanbul ignore next - trivial */
   ngOnInit(): void {
     this.formSubscription =
       this.form.valueChanges.subscribe(
@@ -47,12 +48,14 @@ export class SubscriptionComponent implements OnInit, OnDestroy {
     this.editEntitySubscription.unsubscribe();
   }
 
+  /* istanbul ignore next - trivial */
   prev(event: Event): void {
     event.preventDefault();
     event.stopPropagation();
     this.router.navigate(['/contact']);
   }
 
+  /* istanbul ignore next - trivial */
   next(event: Event): void {
     event.preventDefault();
     event.stopPropagation();

@@ -11,7 +11,6 @@ import { ActionReducerMap, StoreModule } from '@ngrx/store';
 import { SharedState } from './shared-state';
 import { EffectsModule } from '@ngrx/effects';
 import { ErrorsComponent } from './errors/errors.component';
-import { TextInputComponent } from './text-input/text-input.component';
 
 const reducers: ActionReducerMap<SharedState> = {
   wait: WaitReducer,
@@ -30,13 +29,11 @@ const reducers: ActionReducerMap<SharedState> = {
   ],
   declarations: [
     WaitComponent,
-    ErrorsComponent,
-    TextInputComponent
+    ErrorsComponent
   ],
   exports: [
     WaitComponent,
-    ErrorsComponent,
-    TextInputComponent
+    ErrorsComponent
   ]
 })
 export class SharedModule { }

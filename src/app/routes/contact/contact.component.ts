@@ -34,6 +34,7 @@ export class ContactComponent implements OnInit, OnDestroy {
       (x: AppState) => x.shared.subscription);
   }
 
+  /* istanbul ignore next - trivial*/
   ngOnInit(): void {
     this.formSubscription =
       this.form.valueChanges.subscribe(
@@ -45,6 +46,7 @@ export class ContactComponent implements OnInit, OnDestroy {
         this.form.patchValue(x, { emitEvent: false }));
   }
 
+  /* istanbul ignore next - trivial */
   next(event: Event): void {
     event.preventDefault();
     event.stopPropagation();

@@ -21,12 +21,14 @@ export class ReviewComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /* istanbul ignore next - trivial */
   prev(event: Event): void {
     event.preventDefault();
     event.stopPropagation();
     this.router.navigate(['/subscription']);
   }
 
+  /* istanbul ignore next - trivial */
   next(event: Event): void {
     event.preventDefault();
     event.stopPropagation();
