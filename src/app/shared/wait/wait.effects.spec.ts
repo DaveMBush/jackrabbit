@@ -1,9 +1,8 @@
 import { Observable, ReplaySubject } from 'rxjs/Rx';
 import { WaitEffects } from './wait.effects';
-import { inject, TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { provideMockActions } from '@ngrx/effects/testing';
 import * as WaitActions from './wait.actions';
-import { hot, cold } from 'jasmine-marbles';
 
 describe('WaitEffects', () => {
     let actions: ReplaySubject<WaitActions.Add | WaitActions.Start | WaitActions.End>;
