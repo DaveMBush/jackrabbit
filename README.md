@@ -12,3 +12,5 @@ This is a standard CLI project so...
 `npm start`
 
 And then point the browser to http://localhost:4200
+
+Or just view it here: https://davembush.github.io/jackrabbit/
