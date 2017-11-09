@@ -21,7 +21,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/routes/file-not-found/file-not-found.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  file-not-found works!\r\n</p>\r\n"
+module.exports = "<div class=\"container\">\r\n  <p>\r\n    file-not-found works!\r\n  </p>\r\n</div>\r\n"
 
 /***/ }),
 

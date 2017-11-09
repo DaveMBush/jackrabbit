@@ -21,7 +21,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/routes/thankyou/thankyou.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div class=\"row\">\n    <div class=\"col-sm-offset-3 col-sm-6\">\n      Thank you for your subscription!\n    </div>\n  </div>\n\n</div>\n"
+module.exports = "<div class=\"container\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col-sm-offset-3 col-sm-6\">\n        Thank you for your subscription!\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
