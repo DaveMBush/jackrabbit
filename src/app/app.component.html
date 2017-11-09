@@ -11,6 +11,7 @@
     </div>
   </div>
 </nav>
-<div class="container">
-  <router-outlet></router-outlet>
+<!-- router stuff overrides the class -->
+<div [@routerTransition]="getState(o)">
+  <router-outlet #o="outlet"></router-outlet>
 </div>

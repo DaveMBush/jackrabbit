@@ -1,3 +1,4 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -15,6 +16,7 @@ import { EffectsModule } from '@ngrx/effects';
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     SharedModule
   ],
